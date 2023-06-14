@@ -13,7 +13,7 @@ export function DesktopNavbar<DataType extends NavbarLinks[]>({
   testId,
 }: DesktopNavbarProps<DataType>) {
   return (
-    <div className={`flex justify-between ${className}`}>
+    <div className={`p-8 flex justify-between ${className}`}>
       <Link href="/" className="flex items-center">
         <Logo />
       </Link>
