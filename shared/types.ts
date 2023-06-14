@@ -1,6 +1,6 @@
-export type Component<T> = {
+export type Component<DataType> = {
   className?: string
-  data?: T
+  data?: DataType
   testId?: string
   styles?: string
 }
