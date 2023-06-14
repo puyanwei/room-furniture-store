@@ -5,5 +5,5 @@ interface IconProps<DataType> extends Component<DataType> {
 }
 
 export function Icon<DataType>({ className = ``, icon }: IconProps<DataType>) {
-  return <span className={className}>{icon}</span>
+  return <span className={`flex items-center pr-1 ${className}`}>{icon}</span>
 }

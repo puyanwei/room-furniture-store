@@ -30,7 +30,7 @@ type Story = StoryObj<typeof Component>
 
 export const Navbar: Story = {
   render: () => (
-    <div>
+    <div className="p-4 pb-6 -m-4 bg-slate-800">
       <Component data={navbarLinks} />
     </div>
   ),
