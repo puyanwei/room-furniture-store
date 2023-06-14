@@ -15,5 +15,5 @@ export function Navbar<DataType extends NavbarLinks[]>({
   data,
   testId,
 }: NavbarProps<DataType>) {
-  return <DesktopNavbar />
+  return <DesktopNavbar className={className} testId={testId} data={data} />
 }
