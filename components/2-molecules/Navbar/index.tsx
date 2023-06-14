@@ -13,14 +13,22 @@ interface NavbarProps<DataType extends NavbarLinks[]> extends Component<DataType
 }
 
 export function Navbar<DataType extends NavbarLinks[]>({
-  className,
+  className = "",
   data,
   testId,
 }: NavbarProps<DataType>) {
+  const { width } = useWindowSize()
+
+  if (!width) return null
+
+  const isDesktopWidth = width > 1024
   return (
     <>
-      <MobileNavbar className={`lg:hidden ${className}`} testId={testId} data={data} />
-      <DesktopNavbar className={`hidden lg:flex ${className}`} testId={testId} data={data} />
+      {isDesktopWidth ? (
+        <DesktopNavbar className={`hidden lg:flex ${className}`} testId={testId} data={data} />
+      ) : (
+        <MobileNavbar className={`lg:hidden ${className}`} testId={testId} data={data} />
+      )}
     </>
   )
 }
