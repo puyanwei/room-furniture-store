@@ -25,9 +25,9 @@ export function Navbar<DataType extends NavbarLinks[]>({
   return (
     <>
       {isDesktopWidth ? (
-        <DesktopNavbar className={`hidden lg:flex ${className}`} testId={testId} data={data} />
+        <DesktopNavbar className={className} testId={testId} data={data} />
       ) : (
-        <MobileNavbar className={`lg:hidden ${className}`} testId={testId} data={data} />
+        <MobileNavbar className={className} testId={testId} data={data} />
       )}
     </>
   )
