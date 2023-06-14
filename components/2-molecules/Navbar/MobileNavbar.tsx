@@ -3,15 +3,15 @@ import { NavbarLinks } from "."
 import { Logo } from "@/components/1-atoms/Icons/Logo"
 import Link from "next/link"
 
-interface DesktopNavbarProps<DataType extends NavbarLinks[]> extends Component<DataType> {
+interface MobileNavbarProps<DataType extends NavbarLinks[]> extends Component<DataType> {
   data: DataType
 }
 
-export function DesktopNavbar<DataType extends NavbarLinks[]>({
+export function MobileNavbar<DataType extends NavbarLinks[]>({
   className = "",
   data,
   testId,
-}: DesktopNavbarProps<DataType>) {
+}: MobileNavbarProps<DataType>) {
   return (
     <div className={`flex justify-between ${className}`}>
       <Link href="/" className="flex items-center">
@@ -24,7 +24,7 @@ export function DesktopNavbar<DataType extends NavbarLinks[]>({
             href={href}
             key={`${index}-${name}`}
           >
-            {name}
+            {name} MOBILE
           </Link>
         ))}
       </nav>

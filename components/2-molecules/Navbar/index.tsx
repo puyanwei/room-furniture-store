@@ -1,5 +1,7 @@
 import { Component } from "@/shared/types"
 import { DesktopNavbar } from "./DesktopNavbar"
+import { useWindowSize } from "@/shared/hooks/useWindowSize"
+import { MobileNavbar } from "./MobileNavbar"
 
 export type NavbarLinks = {
   name: string
@@ -15,5 +17,10 @@ export function Navbar<DataType extends NavbarLinks[]>({
   data,
   testId,
 }: NavbarProps<DataType>) {
-  return <DesktopNavbar className={className} testId={testId} data={data} />
+  return (
+    <>
+      <MobileNavbar className={`lg:hidden ${className}`} testId={testId} data={data} />
+      <DesktopNavbar className={`hidden lg:flex ${className}`} testId={testId} data={data} />
+    </>
+  )
 }
