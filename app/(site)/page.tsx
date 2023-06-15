@@ -1,7 +1,15 @@
+import { Navbar } from "@/components/2-molecules/Navbar"
+import { navbarLinks } from "@/shared/consts"
+
 export default async function Home() {
   return (
-    <div className="grid h-screen place-items-center bg-slate-50">
-      <main className="text-2xl text-room-darkgray">Hello from app/(site)/page.tsx</main>
+    <div className="grid h-screen bg-black">
+      <Navbar data={navbarLinks} />
+      <main>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat obcaecati perspiciatis et
+        odit impedit assumenda optio iste molestias blanditiis veniam ipsam in autem eum nostrum
+        quis magni quos, expedita molestiae.
+      </main>
     </div>
   )
 }

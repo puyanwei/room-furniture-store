@@ -1,3 +1,5 @@
+"use client"
+
 import { Component } from "@/shared/types"
 import { DesktopNavbar } from "./DesktopNavbar"
 import { useWindowSize } from "@/shared/hooks/useWindowSize"

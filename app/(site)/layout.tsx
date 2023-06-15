@@ -2,7 +2,7 @@ import "@/app/globals.css"
 
 import { ReactNode } from "react"
 import { League_Spartan } from "next/font/google"
-// - Weights: 500, 600, 700
+
 const spartan = League_Spartan({
   subsets: ["latin"],
   weight: ["500", "600", "700"],
