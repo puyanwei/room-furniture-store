@@ -11,11 +11,7 @@ interface MobileNavbarProps extends Component {
   data: NavbarLinks[]
 }
 
-export function MobileNavbar<DataType extends NavbarLinks[]>({
-  className = "",
-  data,
-  testId,
-}: MobileNavbarProps) {
+export function MobileNavbar({ className = "", data, testId }: MobileNavbarProps) {
   const [isMenuOpen, setMenuOpen] = useState(false)
 
   return (

@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useState } from "react"
 import Image from "next/image"
 import { homepageHeroImages } from "@/shared/consts"
 
@@ -17,22 +17,23 @@ export function HomeHero() {
     setSelectedImage((selectedImage + 1) as ImageNumber)
   }
   return (
-    <div>
+    <div className="relative h-screen overflow-hidden">
       {homepageHeroImages.map(({ src, alt }, index) => {
         const imageVisibility = selectedImage === index + 1 ? "" : "hidden"
         return (
           <Image
-            className={`object-contain ${imageVisibility}`}
+            className={`absolute inset-0 w-full h-full object-cover ${imageVisibility}`}
             src={src}
             alt={alt}
-            height={100}
-            width={100}
             key={index}
+            fill
           />
         )
       })}
-      <button className="p-2 bg-green-300 rounded" onClick={handleBackButton}>{`<`}</button>
-      <button className="p-2 bg-green-300 rounded" onClick={handleNextButton}>{`>`}</button>
+      <div className="absolute bottom-0 right-0">
+        <button className="p-2 bg-green-300 rounded" onClick={handleBackButton}>{`<`}</button>
+        <button className="p-2 bg-green-300 rounded" onClick={handleNextButton}>{`>`}</button>
+      </div>
     </div>
   )
 }

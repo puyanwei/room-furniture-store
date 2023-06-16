@@ -21,7 +21,7 @@ export const navbarLinks: NavbarLinks[] = [
 
 export const homepageHeroImages = [
   {
-    src: "./assets/export desktop-image-hero-1.jpg",
+    src: "./assets/desktop-image-hero-1.jpg",
     alt: "white chair and wooden desk",
   },
   {
