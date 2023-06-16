@@ -2,6 +2,8 @@ import "@/app/globals.css"
 
 import { ReactNode } from "react"
 import { League_Spartan } from "next/font/google"
+import { Navbar } from "@/components/2-molecules/Navbar"
+import { navbarLinks } from "@/shared/consts"
 
 const spartan = League_Spartan({
   subsets: ["latin"],
@@ -15,8 +17,11 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <body className={spartan.className}>{children}</body>
+    <html className="grid h-screen bg-black" lang="en">
+      <body className={spartan.className}>
+        <Navbar data={navbarLinks} />
+        {children}
+      </body>
     </html>
   )
 }

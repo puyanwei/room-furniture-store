@@ -1,22 +1,8 @@
 import { useRef, useState } from "react"
 import Image from "next/image"
+import { homepageHeroImages } from "@/shared/consts"
 
 type ImageNumber = 1 | 2 | 3
-
-const images = [
-  {
-    src: "./assets/desktop-image-hero-1.jpg",
-    alt: "white chair and wooden desk",
-  },
-  {
-    src: "./assets/desktop-image-hero-2.jpg",
-    alt: "3 multicolored plastic chairs",
-  },
-  {
-    src: "./assets/desktop-image-hero-3.jpg",
-    alt: "a black metal chair",
-  },
-]
 
 export function HomeHero() {
   const [selectedImage, setSelectedImage] = useState<ImageNumber>(1)
@@ -32,7 +18,7 @@ export function HomeHero() {
   }
   return (
     <div>
-      {images.map(({ src, alt }, index) => {
+      {homepageHeroImages.map(({ src, alt }, index) => {
         const imageVisibility = selectedImage === index + 1 ? "" : "hidden"
         return (
           <Image

@@ -3,18 +3,14 @@ import { NavbarLinks } from "."
 import { Logo } from "@/components/1-atoms/Icons/Logo"
 import Link from "next/link"
 
-interface DesktopNavbarProps<DataType extends NavbarLinks[]> extends Component<DataType> {
-  data: DataType
+interface DesktopNavbarProps extends Component {
+  data: NavbarLinks[]
 }
 
-export function DesktopNavbar<DataType extends NavbarLinks[]>({
-  className = "",
-  data,
-  testId,
-}: DesktopNavbarProps<DataType>) {
+export function DesktopNavbar({ className = "", data, testId }: DesktopNavbarProps) {
   return (
-    <div className={`p-8 flex justify-between ${className}`}>
-      <Link href="/" className="flex items-center">
+    <div className={`p-8 flex ${className}`}>
+      <Link href="/" className="flex items-center pr-16">
         <Logo />
       </Link>
       <nav className={`text-white space-x-12 ${className}`} data-testid={testId}>

@@ -1,9 +1,9 @@
 import { Component } from "@/shared/types"
 
-interface IconProps<DataType> extends Component<DataType> {
+interface IconProps extends Component {
   icon: JSX.Element
 }
 
-export function Icon<DataType>({ className = ``, icon }: IconProps<DataType>) {
+export function Icon({ className = ``, icon }: IconProps) {
   return <span className={`flex items-center pr-1 ${className}`}>{icon}</span>
 }

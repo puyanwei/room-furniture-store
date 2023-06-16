@@ -1,6 +1,11 @@
-export type Component<DataType> = {
+import { ReactNode } from "react"
+
+export type Component = {
   className?: string
-  data?: DataType
   testId?: string
   styles?: string
+}
+
+export interface HasChildren extends Component {
+  children: ReactNode
 }
