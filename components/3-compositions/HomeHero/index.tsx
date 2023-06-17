@@ -7,43 +7,25 @@ import { Icon } from "@/components/1-atoms/Icons"
 import { homepageHeroImages } from "@/shared/consts"
 import { useState } from "react"
 
-type ImageNumber = 1 | 2 | 3
-
 export type Images = Readonly<{
   src: string
   alt: string
 }>
+type ConvertToNumber<T> = T extends `${infer T extends number}` ? T : never
 
-// export const homepageHeroImages = [
-//   {
-//     src: "/assets/mobile-image-hero-1.jpg",
-//     alt: "white chair and wooden desk",
-//   },
-//   {
-//     src: "/assets/mobile-image-hero-2.jpg",
-//     alt: "3 multicolored plastic chairs",
-//   },
-//   {
-//     src: "/assets/mobile-image-hero-3.jpg",
-//     alt: "a black metal chair",
-//   },
-// ] as const satisfies readonly Images[];
-
-// type Indexes = Exclude<keyof typeof homepageHeroImages, keyof Array<any>>; // From https://twitter.com/TheRealP_YAN/status/1670005437372981249. Expecting "1"|"2"|"3"
-// type ToNumber<T> = T extends `${infer T extends number}` ? T : never; // Convert string of numbers union to union numbers
-// type NumberedIndexesInArray = ToNumber<Indexes> // Expecting 1 | 2 | 3
-// //   ^?
+type IndexesAsStringOfUnions = Exclude<keyof typeof homepageHeroImages, keyof Array<any>>
+type ImageNumber = ConvertToNumber<IndexesAsStringOfUnions>
 
 export function HomeHero() {
-  const [selectedImage, setSelectedImage] = useState<ImageNumber>(3)
+  const [selectedImage, setSelectedImage] = useState<ImageNumber>(0)
 
   function handleBackButton() {
-    if (selectedImage === 1) return
+    if (selectedImage === 0) return
     setSelectedImage((selectedImage - 1) as ImageNumber)
   }
 
   function handleNextButton() {
-    const lastElementOfArray = homepageHeroImages.length
+    const lastElementOfArray = homepageHeroImages.length - 1
     if (selectedImage === lastElementOfArray) return
     setSelectedImage((selectedImage + 1) as ImageNumber)
   }
@@ -52,7 +34,7 @@ export function HomeHero() {
   return (
     <div className="relative flex flex-col overflow-hidden h-2/5">
       {homepageHeroImages.map(({ src, alt }, index) => {
-        const imageVisibility = selectedImage === index + 1 ? "" : "hidden"
+        const imageVisibility = selectedImage === index ? "opacity-100" : "opacity-0"
         return (
           <Image
             className={`absolute inset-0 w-full h-full object-cover ${imageVisibility}`}
