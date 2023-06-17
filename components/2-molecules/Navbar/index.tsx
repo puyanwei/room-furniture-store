@@ -1,11 +1,9 @@
-"use client"
-
 import { Component, NavbarLinks } from "@/shared/types"
 import { DesktopNavbar } from "./DesktopNavbar"
 import { MobileNavbar } from "./MobileNavbar"
 
 interface NavbarProps extends Component {
-  data: NavbarLinks[]
+  data: readonly NavbarLinks[]
 }
 
 export function Navbar({ className = "", data, testId }: NavbarProps) {

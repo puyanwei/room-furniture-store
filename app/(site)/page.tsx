@@ -1,11 +1,23 @@
+import { HomeHero } from "@/components/3-compositions/HomeHero/HomeHero"
+import { Component } from "@/shared/types"
+
 export default async function Home() {
   return (
-    <div>
-      <main>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat obcaecati perspiciatis et
-        odit impedit assumenda optio iste molestias blanditiis veniam ipsam in autem eum nostrum
-        quis magni quos, expedita molestiae.
-      </main>
-    </div>
+    <>
+      <HomeHero />
+      <CallToActionSection />
+      <FurnitureImage />
+      <DescriptionSection />
+    </>
   )
+}
+
+function CallToActionSection({ className }: Component) {
+  return <div className={className}></div>
+}
+function FurnitureImage({ className }: Component) {
+  return <div className={className}></div>
+}
+function DescriptionSection({ className }: Component) {
+  return <div className={className}></div>
 }

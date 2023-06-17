@@ -21,15 +21,15 @@ export const navbarLinks: readonly NavbarLinks[] = [
 
 export const homepageHeroImages: readonly Images[] = [
   {
-    src: "./assets/desktop-image-hero-1.jpg",
+    src: "/assets/mobile-image-hero-1.jpg",
     alt: "white chair and wooden desk",
   },
   {
-    src: "./assets/desktop-image-hero-2.jpg",
+    src: "/assets/mobile-image-hero-2.jpg",
     alt: "3 multicolored plastic chairs",
   },
   {
-    src: "./assets/desktop-image-hero-3.jpg",
+    src: "/assets/mobile-image-hero-3.jpg",
     alt: "a black metal chair",
   },
 ] as const

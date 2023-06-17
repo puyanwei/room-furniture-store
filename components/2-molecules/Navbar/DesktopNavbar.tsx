@@ -1,10 +1,9 @@
-import { Component } from "@/shared/types"
-import { NavbarLinks } from "."
+import { Component, NavbarLinks } from "@/shared/types"
 import { Logo } from "@/components/1-atoms/Icons/Logo"
 import Link from "next/link"
 
 interface DesktopNavbarProps extends Component {
-  data: NavbarLinks[]
+  data: readonly NavbarLinks[]
 }
 
 export function DesktopNavbar({ className = "", data, testId }: DesktopNavbarProps) {

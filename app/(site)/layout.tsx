@@ -17,7 +17,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html className="grid h-screen bg-black" lang="en">
+    <html className="grid h-screen" lang="en">
       <body className={spartan.className}>
         <Navbar data={navbarLinks} />
         {children}

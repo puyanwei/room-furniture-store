@@ -11,7 +11,7 @@ type Story = StoryObj<typeof Component>
 
 export const HomeHero: Story = {
   render: () => (
-    <div>
+    <div className="h-screen">
       <Component />
     </div>
   ),
