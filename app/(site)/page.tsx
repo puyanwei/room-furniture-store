@@ -1,4 +1,5 @@
-import { HomeHero } from "@/components/3-compositions/HomeHero/HomeHero"
+import { CallToActionSection } from "@/components/3-compositions/CallToActionSection"
+import { HomeHero } from "@/components/3-compositions/HomeHero"
 import { Component } from "@/shared/types"
 
 export default async function Home() {
@@ -12,9 +13,6 @@ export default async function Home() {
   )
 }
 
-function CallToActionSection({ className }: Component) {
-  return <div className={className}></div>
-}
 function FurnitureImage({ className }: Component) {
   return <div className={className}></div>
 }

@@ -9,8 +9,33 @@ import { useState } from "react"
 
 type ImageNumber = 1 | 2 | 3
 
+export type Images = Readonly<{
+  src: string
+  alt: string
+}>
+
+// export const homepageHeroImages = [
+//   {
+//     src: "/assets/mobile-image-hero-1.jpg",
+//     alt: "white chair and wooden desk",
+//   },
+//   {
+//     src: "/assets/mobile-image-hero-2.jpg",
+//     alt: "3 multicolored plastic chairs",
+//   },
+//   {
+//     src: "/assets/mobile-image-hero-3.jpg",
+//     alt: "a black metal chair",
+//   },
+// ] as const satisfies readonly Images[];
+
+// type Indexes = Exclude<keyof typeof homepageHeroImages, keyof Array<any>>; // From https://twitter.com/TheRealP_YAN/status/1670005437372981249. Expecting "1"|"2"|"3"
+// type ToNumber<T> = T extends `${infer T extends number}` ? T : never; // Convert string of numbers union to union numbers
+// type NumberedIndexesInArray = ToNumber<Indexes> // Expecting 1 | 2 | 3
+// //   ^?
+
 export function HomeHero() {
-  const [selectedImage, setSelectedImage] = useState<ImageNumber>(1)
+  const [selectedImage, setSelectedImage] = useState<ImageNumber>(3)
 
   function handleBackButton() {
     if (selectedImage === 1) return

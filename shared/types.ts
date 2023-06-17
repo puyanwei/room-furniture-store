@@ -6,7 +6,7 @@ export type Component = {
   styles?: string
 }
 
-export interface HasChildren extends Component {
+export interface ComponentWithChildren extends Component {
   children: ReactNode
 }
 

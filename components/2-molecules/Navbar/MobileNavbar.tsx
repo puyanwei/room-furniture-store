@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Component, HasChildren, NavbarLinks } from "@/shared/types"
+import { Component, ComponentWithChildren, NavbarLinks } from "@/shared/types"
 import { Logo } from "@/components/1-atoms/Icons/Logo"
 import { Hamburger } from "@/components/1-atoms/Icons/Hamburger"
 import { Icon } from "@/components/1-atoms/Icons"
@@ -48,9 +48,9 @@ export function MobileNavbar({ className = "", data, testId }: MobileNavbarProps
   )
 }
 
-function OpenedMenu({ children, className }: HasChildren) {
+function OpenedMenu({ children, className }: ComponentWithChildren) {
   return <div className={className}>{children}</div>
 }
-function ClosedMenu({ children, className }: HasChildren) {
+function ClosedMenu({ children, className }: ComponentWithChildren) {
   return <div className={className}>{children}</div>
 }
