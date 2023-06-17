@@ -4,8 +4,15 @@ import { homepageHeroImages } from "@/shared/consts"
 
 type ImageNumber = 1 | 2 | 3
 
+/*
+Trying to have ImageNumber automatically be inferred based on homepageHeroImages.length
+
+type InferNumberUnion<T extends { readonly length: number }> = T["length"]
+type ImageNumber = InferNumberUnion<typeof homepageHeroImages> // ImageNumber should be 1 | 2 | 3 
+*/
+
 export function HomeHero() {
-  const [selectedImage, setSelectedImage] = useState<ImageNumber>(1)
+  const [selectedImage, setSelectedImage] = useState<ImageNumber>(4)
 
   function handleBackButton() {
     if (selectedImage === 1) return
@@ -13,11 +20,11 @@ export function HomeHero() {
   }
 
   function handleNextButton() {
-    if (selectedImage === 3) return
+    if (selectedImage === homepageHeroImages.length - 1) return
     setSelectedImage((selectedImage + 1) as ImageNumber)
   }
   return (
-    <div className="relative h-screen overflow-hidden">
+    <div className="relative flex flex-col overflow-hidden h-[330px]">
       {homepageHeroImages.map(({ src, alt }, index) => {
         const imageVisibility = selectedImage === index + 1 ? "" : "hidden"
         return (

@@ -1,7 +1,6 @@
 import { useState } from "react"
 import Link from "next/link"
-import { Component, HasChildren } from "@/shared/types"
-import { NavbarLinks } from "."
+import { Component, HasChildren, NavbarLinks } from "@/shared/types"
 import { Logo } from "@/components/1-atoms/Icons/Logo"
 import { Hamburger } from "@/components/1-atoms/Icons/Hamburger"
 import { Icon } from "@/components/1-atoms/Icons"
