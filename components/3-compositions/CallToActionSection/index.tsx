@@ -1,5 +1,6 @@
 import { Heading } from "@/components/1-atoms/typography/Heading"
 import { Text } from "@/components/1-atoms/typography/Text"
+import { ShopButton } from "@/components/2-molecules/ShopButton"
 
 export function CallToActionSection() {
   return (
@@ -10,6 +11,7 @@ export function CallToActionSection() {
         experts combine form and function in bringing your vision to life. Create a room in your own
         style with our collection and make your property a reflection of you and what you love.
       </Text>
+      <ShopButton className="py-6" />
     </main>
   )
 }
