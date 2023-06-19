@@ -15,7 +15,7 @@ export type Images = Readonly<{
 type IndexesAsStringOfUnions = Exclude<keyof typeof homepageHeroImages, keyof Array<any>>
 type ConvertToNumber<T> = T extends `${infer T extends number}` ? T : never
 type ImageNumber = ConvertToNumber<IndexesAsStringOfUnions>
-// Infers numbers by numbers of elements in homepageHeroImages array
+// Infers numbers by the number of elements in the homepageHeroImages array
 
 export function HomeHero() {
   const [selectedImage, setSelectedImage] = useState<ImageNumber>(0)
@@ -33,15 +33,17 @@ export function HomeHero() {
 
   const buttonStyles = "p-6 bg-black hover:bg-neutral-700"
   return (
-    <div className="relative flex flex-col overflow-hidden h-2/5">
+    <div className="relative flex flex-col overflow-hidden h-72">
       {homepageHeroImages.map(({ src, alt }, index) => {
         const imageVisibility = selectedImage === index ? "opacity-100" : "opacity-0"
         return (
           <Image
-            className={`absolute inset-0 w-full h-full object-cover ${imageVisibility}`}
+            className={`absolute inset-0 object-cover ${imageVisibility}`}
             src={src}
             alt={alt}
             key={index}
+            // height={416}
+            // width={433}
             fill
           />
         )

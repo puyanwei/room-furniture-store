@@ -2,7 +2,7 @@ import { Component } from "@/shared/types"
 
 const headingStyles = {
   h1: "text-4xl",
-  h2: "text-[100px]",
+  h2: "text-xs tracking-[0.3em]",
   h3: "text-[56px]",
   h4: "text-[32px]",
   h5: "text-[26px] tracking-[4.75px]",

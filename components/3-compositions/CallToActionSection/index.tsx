@@ -4,14 +4,14 @@ import { ShopButton } from "@/components/2-molecules/ShopButton"
 
 export function CallToActionSection() {
   return (
-    <main className="px-8 py-16">
+    <main className="px-8 py-12">
       <Heading level="h1">Discover innovative ways to decorate</Heading>
       <Text className="py-4">
         We provide unmatched quality, comfort, and style for property owners across the country. Our
         experts combine form and function in bringing your vision to life. Create a room in your own
         style with our collection and make your property a reflection of you and what you love.
       </Text>
-      <ShopButton className="py-6" />
+      <ShopButton className="pt-6 pb-2" />
     </main>
   )
 }

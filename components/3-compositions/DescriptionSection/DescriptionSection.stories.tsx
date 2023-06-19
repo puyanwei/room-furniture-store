@@ -12,7 +12,7 @@ type Story = StoryObj<typeof Component>
 export const DescriptionSection: Story = {
   render: () => (
     <div>
-      <Component src="/assets/image-about-dark.jpg" alt="Two fabric coffee table chairs" />
+      <Component />
     </div>
   ),
 }

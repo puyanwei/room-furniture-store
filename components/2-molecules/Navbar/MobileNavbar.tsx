@@ -16,7 +16,7 @@ export function MobileNavbar({ className = "", data, testId }: MobileNavbarProps
   const [isMenuOpen, setMenuOpen] = useState(false)
 
   return (
-    <div className={`absolute z-10 ${className}`}>
+    <div className={`z-10 ${className}`}>
       {isMenuOpen ? (
         <OpenedMenu className="flex justify-between w-screen px-4 py-12 font-bold text-black bg-white">
           <button className="pl-4" onClick={() => setMenuOpen(false)}>
