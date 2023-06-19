@@ -7,9 +7,10 @@ interface ShopButtonProps extends Component {}
 
 export function ShopButton({ className }: ShopButtonProps) {
   return (
-    <div className={className}>
+    <div className={`hover:text-neutral-400 ${className}`}>
       <Link className="flex items-center text-sm tracking-[1em]" href="/shop">
-        SHOP NOW <Icon className="pl-6" icon={<Arrow />} />
+        SHOP NOW
+        <Icon className="pl-6" icon={<Arrow className="fill-current" />} />
       </Link>
     </div>
   )

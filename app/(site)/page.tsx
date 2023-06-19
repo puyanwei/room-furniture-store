@@ -7,15 +7,11 @@ export default async function Home() {
     <>
       <HomeHero />
       <CallToActionSection />
-      <FurnitureImage />
       <DescriptionSection />
     </>
   )
 }
 
-function FurnitureImage({ className }: Component) {
-  return <div className={className}></div>
-}
 function DescriptionSection({ className }: Component) {
   return <div className={className}></div>
 }

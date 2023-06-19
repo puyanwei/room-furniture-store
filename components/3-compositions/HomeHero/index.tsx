@@ -11,10 +11,11 @@ export type Images = Readonly<{
   src: string
   alt: string
 }>
-type ConvertToNumber<T> = T extends `${infer T extends number}` ? T : never
 
 type IndexesAsStringOfUnions = Exclude<keyof typeof homepageHeroImages, keyof Array<any>>
+type ConvertToNumber<T> = T extends `${infer T extends number}` ? T : never
 type ImageNumber = ConvertToNumber<IndexesAsStringOfUnions>
+// Infers numbers by numbers of elements in homepageHeroImages array
 
 export function HomeHero() {
   const [selectedImage, setSelectedImage] = useState<ImageNumber>(0)
