@@ -31,30 +31,31 @@ export function HomeHero() {
     setSelectedImage((selectedImage + 1) as ImageNumber)
   }
 
-  const buttonStyles = "p-6 bg-black hover:bg-neutral-700"
+  const buttonStyles = "p-4 bg-black hover:bg-neutral-700"
+
   return (
-    <div className="relative flex flex-col overflow-hidden h-72">
-      {homepageHeroImages.map(({ src, alt }, index) => {
-        const imageVisibility = selectedImage === index ? "opacity-100" : "opacity-0"
-        return (
-          <Image
-            className={`absolute inset-0 object-cover ${imageVisibility}`}
-            src={src}
-            alt={alt}
-            key={index}
-            // height={416}
-            // width={433}
-            fill
-          />
-        )
-      })}
-      <div className="absolute bottom-0 right-0">
-        <button className={buttonStyles} onClick={handleBackButton}>
-          <Icon className="scale-75" icon={<AngleLeft />} />
-        </button>
-        <button className={buttonStyles} onClick={handleNextButton}>
-          <Icon className="scale-75" icon={<AngleRight />} />
-        </button>
+    <div className="">
+      <div className="relative w-full h-80">
+        {homepageHeroImages.map(({ src, alt }, index) => {
+          const imageVisibility = selectedImage === index ? "opacity-100" : "opacity-0"
+          return (
+            <Image
+              className={`absolute inset-0 object-cover ${imageVisibility}`}
+              src={src}
+              alt={alt}
+              key={index}
+              fill
+            />
+          )
+        })}
+        <div className="absolute bottom-0 right-0">
+          <button className={buttonStyles} onClick={handleBackButton}>
+            <Icon className="scale-50" icon={<AngleLeft />} />
+          </button>
+          <button className={buttonStyles} onClick={handleNextButton}>
+            <Icon className="scale-50" icon={<AngleRight />} />
+          </button>
+        </div>
       </div>
     </div>
   )
