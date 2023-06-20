@@ -5,5 +5,5 @@ interface IconProps extends Component {
 }
 
 export function Icon({ className = ``, icon }: IconProps) {
-  return <span className={`flex items-center pr-1 ${className}`}>{icon}</span>
+  return <span className={`flex shrink-0 items-center pr-1 ${className}`}>{icon}</span>
 }

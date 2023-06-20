@@ -8,17 +8,16 @@ interface DescriptionSectionProps extends Component {}
 export function DescriptionSection({ className }: DescriptionSectionProps) {
   return (
     <div className={className}>
-      <div className="relative overflow-hidden h-72">
-        <Image
-          className="absolute inset-0 object-cover w-full h-full"
-          src="/assets/image-about-dark.jpg"
-          alt="Two fabric coffee table chairs"
-          key="Two fabric coffee table chairs"
-          fill
-        />
-      </div>
+      <Image
+        className="object-cover w-full aspect-video"
+        src="/assets/image-about-dark.jpg"
+        alt="Two fabric coffee table chairs"
+        key="Two fabric coffee table chairs"
+        height={360}
+        width={375}
+      />
       <div className="p-8">
-        <Heading className="py-4 uppercase" level="h2">
+        <Heading className="py-4 uppercase bold" level="h2">
           About Our Furniture
         </Heading>
         <Text>
@@ -29,15 +28,14 @@ export function DescriptionSection({ className }: DescriptionSectionProps) {
           space.
         </Text>
       </div>
-      <div className="relative overflow-hidden h-72">
-        <Image
-          className="absolute inset-0 object-cover w-full h-full"
-          src="/assets/image-about-light.jpg"
-          alt="A plastic white chair"
-          key="A plastic white chair"
-          fill
-        />
-      </div>
+      <Image
+        className="object-cover w-full aspect-video"
+        src="/assets/image-about-light.jpg"
+        alt="A plastic white chair"
+        key="A plastic white chair"
+        height={360}
+        width={375}
+      />
     </div>
   )
 }

@@ -1,17 +1,19 @@
 import { Heading } from "@/components/1-atoms/typography/Heading"
 import { Text } from "@/components/1-atoms/typography/Text"
 import { ShopButton } from "@/components/2-molecules/ShopButton"
+import { Component } from "@/shared/types"
 
-export function CallToActionSection() {
+interface CallToActionSectionProps extends Component {
+  text: string
+  heading: string
+}
+
+export function CallToActionSection({ text, heading }: CallToActionSectionProps) {
   return (
-    <main className="px-8 py-12">
-      <Heading level="h1">Discover innovative ways to decorate</Heading>
-      <Text className="py-4">
-        We provide unmatched quality, comfort, and style for property owners across the country. Our
-        experts combine form and function in bringing your vision to life. Create a room in your own
-        style with our collection and make your property a reflection of you and what you love.
-      </Text>
+    <div className="px-8 py-12 space-y-4">
+      <Heading level="h1">{heading}</Heading>
+      <Text className="h-28">{text}</Text>
       <ShopButton className="pt-6 pb-2" />
-    </main>
+    </div>
   )
 }

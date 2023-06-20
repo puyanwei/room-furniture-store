@@ -12,7 +12,11 @@ type Story = StoryObj<typeof Component>
 export const HomeHero: Story = {
   render: () => (
     <div className="h-screen">
-      <Component />
+      <Component
+        selectedImage={0}
+        handleBackButton={() => console.warn("Clicked back")}
+        handleNextButton={() => console.warn("Clicked next")}
+      />
     </div>
   ),
 }
