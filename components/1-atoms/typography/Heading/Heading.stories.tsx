@@ -12,7 +12,8 @@ type Story = StoryObj<typeof Component>
 export const Headings: Story = {
   render: () => (
     <div>
-      <Component level="h1">Heading 1 using h1</Component>
+      <Component level="h1">Large Heading</Component>
+      <Component level="h2">Medium Subheading</Component>
     </div>
   ),
 }
