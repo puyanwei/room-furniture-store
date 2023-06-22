@@ -9,8 +9,8 @@ interface NavbarProps extends Component {
 export function Navbar({ className = "", data, testId }: NavbarProps) {
   return (
     <>
-      <DesktopNavbar className={`hidden md:flex ${className}`} testId={testId} data={data} />
-      <MobileNavbar className={`md:hidden ${className}`} testId={testId} data={data} />
+      <DesktopNavbar className={`hidden lg:flex ${className}`} testId={testId} data={data} />
+      <MobileNavbar className={`lg:hidden ${className}`} testId={testId} data={data} />
     </>
   )
 }

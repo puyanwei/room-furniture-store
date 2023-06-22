@@ -22,17 +22,17 @@ export default function Home() {
 
   function handleBackButton() {
     if (index === 0) return
-    setIndex((prevIndex) => (prevIndex - 1) as ImageNumber)
+    setIndex((index - 1) as ImageNumber)
   }
 
   function handleNextButton() {
     const lastElementOfArray = furnitureInfo.length - 1
     if (index === lastElementOfArray) return
-    setIndex((prevIndex) => (prevIndex + 1) as ImageNumber)
+    setIndex((index + 1) as ImageNumber)
   }
 
   return (
-    <>
+    <div className="flex flex-col w-full h-screen lg:grid lg:grid-cols-12 lg:grid-rows-3">
       <HomeHero
         className="sm:hidden"
         src={small}
@@ -43,7 +43,7 @@ export default function Home() {
         handleNextButton={handleNextButton}
       />
       <HomeHero
-        className="hidden sm:block"
+        className="hidden sm:block lg:col-start-1 lg:row-start-1 lg:row-end-3 lg:col-span-7"
         src={large}
         alt={alt}
         width={840}
@@ -51,8 +51,12 @@ export default function Home() {
         handleBackButton={handleBackButton}
         handleNextButton={handleNextButton}
       />
-      <CallToActionSection heading={heading} text={text} />
+      <CallToActionSection
+        className="lg:col-span-5 lg:row-start-1 lg:row-end-2"
+        heading={heading}
+        text={text}
+      />
       <DescriptionSection />
-    </>
+    </div>
   )
 }

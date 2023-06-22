@@ -7,9 +7,9 @@ interface DescriptionSectionProps extends Component {}
 
 export function DescriptionSection({ className }: DescriptionSectionProps) {
   return (
-    <div className={`sm:text-center ${className}`}>
+    <div className="lg:col-span-full lg:row-start-3 lg:row-end-4 lg:grid lg:grid-cols-[30%_40%_30%]">
       <Image
-        className="object-cover w-full aspect-video"
+        className="object-cover w-full aspect-video lg:h-full"
         src="/assets/image-about-dark.jpg"
         alt="Two fabric coffee table chairs"
         key="Two fabric coffee table chairs"
@@ -29,7 +29,7 @@ export function DescriptionSection({ className }: DescriptionSectionProps) {
         </Text>
       </div>
       <Image
-        className="object-cover w-full aspect-video"
+        className="object-cover w-full aspect-video lg:h-full"
         src="/assets/image-about-light.jpg"
         alt="A plastic white chair"
         key="A plastic white chair"

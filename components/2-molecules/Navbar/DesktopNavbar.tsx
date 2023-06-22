@@ -8,7 +8,7 @@ interface DesktopNavbarProps extends Component {
 
 export function DesktopNavbar({ className = "", data, testId }: DesktopNavbarProps) {
   return (
-    <div className={`p-8 flex ${className}`}>
+    <div className={`p-8 z-10 absolute top-0 left-0 ${className}`}>
       <Link href="/" className="flex items-center pr-16">
         <Logo />
       </Link>

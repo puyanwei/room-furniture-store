@@ -22,9 +22,9 @@ export function HomeHero({
   handleBackButton,
   handleNextButton,
 }: HomeHeroProps) {
-  const buttonStyles = "p-4 bg-black hover:bg-neutral-700"
+  const buttonStyles = "p-4 lg:p-[47px] bg-black hover:bg-neutral-700"
   return (
-    <div className={`relative w-full shrink-0 h-80 ${className}`}>
+    <div className={`relative w-full shrink-0 h-80 lg:h-full ${className}`}>
       <Image
         className="absolute inset-0 object-cover object-center w-full h-full"
         src={src}
@@ -34,12 +34,12 @@ export function HomeHero({
         width={width}
         priority
       />
-      <ButtonGroup className="absolute bottom-0 right-0">
+      <ButtonGroup className="absolute bottom-0 right-0 lg:right-[-224px]">
         <button className={buttonStyles} onClick={handleBackButton}>
-          <Icon className="scale-50" icon={<AngleLeft />} />
+          <Icon className="scale-50 lg:scale-100" icon={<AngleLeft />} />
         </button>
         <button className={buttonStyles} onClick={handleNextButton}>
-          <Icon className="scale-50" icon={<AngleRight />} />
+          <Icon className="scale-50 lg:scale-100" icon={<AngleRight />} />
         </button>
       </ButtonGroup>
     </div>

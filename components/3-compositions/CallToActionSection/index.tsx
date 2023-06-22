@@ -8,9 +8,9 @@ interface CallToActionSectionProps extends Component {
   heading: string
 }
 
-export function CallToActionSection({ text, heading }: CallToActionSectionProps) {
+export function CallToActionSection({ className, text, heading }: CallToActionSectionProps) {
   return (
-    <div className="px-8 py-12 space-y-4 sm:text-center">
+    <div className={`px-8 py-12 space-y-4 sm:text-center ${className}`}>
       <Heading level="h1">{heading}</Heading>
       <Text className="h-28 sm:h-auto">{text}</Text>
       <ShopButton className="pt-6 pb-2" />
