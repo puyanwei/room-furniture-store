@@ -2,8 +2,14 @@
 
 This is a frontend mentor [challenge](https://www.frontendmentor.io/challenges/room-homepage-BtdBY_ENq) exercise to build a website for a furniture store called "Room".
 
-URL - https://room-furniture-store.vercel.app/
-Storybook URL - https://64945e9e9cc33b0504112779-wfgbyalohx.chromatic.com/
+| Website   | https://room-furniture-store.vercel.app/                   |
+| --------- | ---------------------------------------------------------- |
+| Storybook | https://64945e9e9cc33b0504112779-wfgbyalohx.chromatic.com/ |
+
+![desktop-preview](https://github.com/puyanwei/room-furniture-store/assets/14803518/37fc1735-a2d9-4337-acbf-0bb94e979039)
+![mobile-design](https://github.com/puyanwei/room-furniture-store/assets/14803518/c2c3d17e-106f-452a-8b88-3ef905d14b27)
+
+There didn't seem to be any tablet designs so that breakpoint was improvised.
 
 ### Tech
 
