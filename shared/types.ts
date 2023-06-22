@@ -11,7 +11,10 @@ export interface ComponentWithChildren extends Component {
 }
 
 export type FurnitureInfo = Readonly<{
-  src: string
+  src: {
+    small: string
+    large: string
+  }
   alt: string
   heading: string
   text: string

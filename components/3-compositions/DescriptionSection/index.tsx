@@ -7,7 +7,7 @@ interface DescriptionSectionProps extends Component {}
 
 export function DescriptionSection({ className }: DescriptionSectionProps) {
   return (
-    <div className={className}>
+    <div className={`sm:text-center ${className}`}>
       <Image
         className="object-cover w-full aspect-video"
         src="/assets/image-about-dark.jpg"

@@ -13,6 +13,8 @@ export const HomeHero: Story = {
   render: () => (
     <div className="h-screen">
       <Component
+        width={840}
+        height={534}
         src="/assets/desktop-image-hero-1.jpg"
         alt="two white chairs and a desk"
         handleBackButton={() => console.warn("Clicked back")}
