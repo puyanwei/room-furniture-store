@@ -16,8 +16,8 @@ export function DescriptionSection({ className }: DescriptionSectionProps) {
         height={360}
         width={375}
       />
-      <div className="p-8">
-        <Heading className="py-4 uppercase bold" level="h2">
+      <div className="p-8 lg:p-16">
+        <Heading className="py-4 font-bold uppercase" level="h2">
           About Our Furniture
         </Heading>
         <Text>
